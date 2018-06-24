@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>java script based ARTIFICLE INTELLINGENCE by Vibhor Singh</title>
+    <script type="text/javascript">
+	var text=[];
+	var myArray0 =  ['well hello sir', 'hi ', 'how may I help you'];
+    var myArray1 = ['DONT ABUSE', 'STOP IT', 'JUST STOP','BSDK CHUP KAR','BC'];   
+    var myArray2 = ['THATS BEYOND MY REACH', 'SORRY SIR! BUT I CANNOT HELP', 'I HAVE LIMITS SIR'];   
+    var myArray3 = ['me too', 'i love you too', 'feelings are mutual'];   
+    var myArray4 = ['DONT ABUSE', 'STOP IT', 'JUST STOP'];   
+    var myArray5 = ['vibhor singh', 'I was created by vibhor singh', 'i was designed by vibhor singh']; 
+    var myArray6 = ['THANK YOU SIR FOR COMPLEMENT', 'DONT MAKE ME BLUSH', 'TOO MUCH APPRICIATION'];
+    var myArray7 = ['HAVE I DONE SOMETHING WRONG', 'SORRY FOR MY MITAKES','I AM A NOOB'];  	
+	var pos={"hello":7, "hi":7, "bonjour":7, "wassup":7};//
+    var neg={"asshole":-1,"nigga":-1,"cunt":-1,"pussy":-1,"bhenchod":-1,"bc":-1,"mc":-1};//
+    var intense={"so":1, "too":1, "very":1, "far":1};
+    var liking={"like":8, "love":8, "interested":8, "admire":8};	
+	var question={"how":2,"what":2,"where":2,"when":2,"who":2};//
+	var positive={"good":6,"helpful":6,"caring":6,"mindblowing":6,"intellgent":6};
+	var negative={"bad":14,"selfish":14,"unethical":14,"boring":14,"useless":14};
+	var common={"is":0,"are":0,"you":0,"am":0};//
+	var user={"I":4,"i":4,"we":4,"me":4};
+	var author={"developer":3,"father":3,"creater":3,"created":3,"designed":3}; 	
+	var off={"shutdown":15,"exit":15,"off":15,"terminate":15,"quit":15}; 	
+	var x=0;
+	function quer(){
+    do { 
+       var ct = document.getElementById("myText").value;  
+       var words = ct.split(' ');	   
+       for(i=0;i<words.length;i++)		  
+       {//alert(words[i]);
+	   if(words[i] in question)
+	   {x=x+question["how"];}
+	   
+	   else if(words[i] in author)
+	      {x=x+author["father"];
+		  }
+		  else if(words[i] in common)
+	      {x=x+common["are"];
+		  }
+		  else if(words[i] in neg)
+	      {x=x+neg["asshole"];
+		  }
+		  else if(words[i] in pos)
+	      {x=x+pos["hello"];
+		  }
+		  else if(words[i] in user)
+	      {x=x+user["i"];
+		  }
+		  else if(words[i] in liking)
+	      {x=x+liking["love"];
+		  }
+		  else if(words[i] in positive)
+	      {x=x+positive["good"];
+		  }
+		  else if(words[i] in negative)
+	      {x=x+negative["boring"];
+		  }
+		  else if(words[i] in off)
+	      {r=false;
+		  }
+		  }//for over
+		 // displayContents(text);
+		 
+		 if(x==7||x==11)
+		 {
+		 alert(myArray0[Math.floor(Math.random() * myArray0.length)]);
+		
+		 }
+		 if(x==-1)
+		 {
+		 alert(myArray1[Math.floor(Math.random() * myArray1.length)]);
+		 }
+		 
+		 if(x==8||x==12)
+		 {
+		 alert(myArray3[Math.floor(Math.random() * myArray3.length)]);
+		
+		 }
+		 if(x==5)
+		 {
+		 alert(myArray5[Math.floor(Math.random() * myArray5.length)]);
+		 }
+		 if(x==6)
+		 {
+		 alert(myArray6[Math.floor(Math.random() * myArray6.length)]);
+		
+		 }
+		 if(x==14)
+		 {
+		 alert(myArray7[Math.floor(Math.random() * myArray7.length)]);
+		
+		 }
+		
+		 
+		x=0; 
+		text=[];
+		p=0;
+		n=0;
+		ct=null;
+		words=null;
+	    
+        }while(r!==false) 
+       
+         
+        }
+</script>
+<style>
+.center {
+    margin: 150px -29px -51px 82px;
+    width: 60%;
+    border: 5px solid #73AD21;
+    padding: 10px;
+}
+input[type="text"]
+{
+    font-size:30px;
+}
+</style>
+</head>
+<body background="img1.jpg">
+<div class="center">
+<input class="form-control" type="text" id="myText" style="width:700px ;height:100px"/><br><br>
+<button onclick="quer()">SUBMIT</button>
+</div>
+</body>
+</html>
